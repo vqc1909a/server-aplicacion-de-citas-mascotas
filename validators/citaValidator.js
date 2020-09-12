@@ -7,3 +7,10 @@ exports.citapost = [
      check('hora').trim().notEmpty().withMessage('Ingrese la hora por favor'),
      check('description').trim().notEmpty().withMessage('Ingrese sus síntomas de la mascota por favor')
 ]
+exports.citaput = [
+     check('name').trim().notEmpty().withMessage('El nombre de la mascota es obligatorio'),
+     check('propietario').trim().notEmpty().withMessage('El nombre del dueño es obligatorio'),
+     check('fecha').trim().notEmpty().withMessage('La fecha es obligatoria'),
+     check('hora').trim().notEmpty().withMessage('Ingrese la hora por favor'),
+     check('description').trim().notEmpty().withMessage('Ingrese sus síntomas de la mascota por favor')
+]

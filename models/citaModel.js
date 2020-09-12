@@ -26,6 +26,8 @@ const CitaSchema  = mongoose.Schema({
           required: true,
           trim: true
      }
+},{
+     timestamps: true,
 });
 
 const Cita = mongoose.model('Cita', CitaSchema);
