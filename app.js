@@ -23,7 +23,7 @@ app.use('/api', citaRoute);
 
 //Ruta principal
 app.get('/', (req, res) => {
-     res.send('Hola ')
+     res.send('Hola')
 })
 
 //Verificar puerto
