@@ -14,7 +14,9 @@ const port = process.env.PORT || 4000;
 connectDB();
 
 //Middleware
-app.use(bodyParser.json());
+//Se recomienda usar express.json() en vez de bodyParser.json() que es antiguo
+app.use(express.json());
+//estás permitiendo que cualquier origen (es decir, cualquier dominio) tenga acceso a tu servidor y pueda hacer solicitudes HTTP a tus endpoints.
 app.use(cors());
 
 

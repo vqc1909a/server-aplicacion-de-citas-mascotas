@@ -19,6 +19,9 @@ Router.post('/citas', citapost, async(req, res) => {
 })
 Router.get('/citas', async (req, res) => {
      try{
+          //En esta expresión, el número 1 que se proporciona como valor indica que se ordenará en orden ascendente (es decir, de menor a mayor) en función de los valores de los campos "fecha" y "hora". Si se quisiera ordenar de forma descendente, se podría proporcionar un valor de -1 en lugar de 1.
+          //En fechas y horas el menor valor es el mas lejano a la actualidad, si es 1 no es encesario porque lo ordena de forman ascendente
+          //Si fuera -1, estableceriamos los datos del mas cerano al mas lejano a la actualidad
           const citas = await Cita.find({}).sort({fecha: 1, hora: 1});    
           return res.status(200).json({message: citas});
      }catch(err){
